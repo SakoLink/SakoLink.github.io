@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+    <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+    <a href="Kanallar/Bein1.html" class="w3-bar-item w3-button">Bein Sports 1</a>
+    <a href="Kanallar/Bein2.html" class="w3-bar-item w3-button">Bein Sports 2</a>
+    <a href="Kanallar/Bein3.html" class="w3-bar-item w3-button">Bein Sports 3</a>
+    <a href="Kanallar/Bein4.html" class="w3-bar-item w3-button">Bein Sports 4</a>
+    <a href="Kanallar/Bein5.html" class="w3-bar-item w3-button">Bein Sports 5</a>
+  </div>
+  
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+    <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+    <a href="Kanallar/SSport1.html" class="w3-bar-item w3-button">S Sport 1</a>
+    <a href="Kanallar/SSport2.html" class="w3-bar-item w3-button">S Sport 2</a>
+    <a href="Kanallar/nbaTV.html" class="w3-bar-item w3-button">NBA TV</a>
+  </div>
+  
+  <div class="w3-teal">
+    <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+    <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+    <div class="w3-center">
+      <h1>SakoTV</h1>
+    </div>
+  </div>
+  
+  <div class="w3-container">
+  <p></p>
+  <p></p>
+  </div>
+       
+  <script>
+  function openLeftMenu() {
+    document.getElementById("leftMenu").style.display = "block";
+  }
+  
+  function closeLeftMenu() {
+    document.getElementById("leftMenu").style.display = "none";
+  }
+  
+  function openRightMenu() {
+    document.getElementById("rightMenu").style.display = "block";
+  }
+  
+  function closeRightMenu() {
+    document.getElementById("rightMenu").style.display = "none";
+  }
+  </script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6356735003272876"
+     crossorigin="anonymous"></script>
+<!-- Site En Üst -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:1080px;height:50px"
+     data-ad-client="ca-pub-6356735003272876"
+     data-ad-slot="7596621046"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- LIVESCORE WIDGET SOCCERSAPI.COM -->
+<div id="ls-widget" data-w="w_default" class="livescore-widget" width="720dp"></div>
+<script type="text/javascript" src="https://ls.soccersapi.com/widget/res/w_default/widget.js">
+</script>
+<!-- LIVESCORE WIDGET SOCCERSAPI.COM -->
+</script>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  
+
+  <div class="w3-row w3-padding-64" style="background-image: url(13932.jpg);">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">SakoTV</h1>
+      <p></p>
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>SakoTV Sunar...</h4>
+    </div>
+    
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {
+	background-image: linear-gradient(to right, #2B5876 , #4E4376);
+	color: #fff;
+}
+
+.maindiv {
+	text-align: center;
+}
+
+h1 {
+	font-size: 50px;
+	font-family: 'Paytone One', sans-serif;
+	margin-bottom: 50px;
+}
+
+#myLinks {
+	width: 50%;
+    border: 5px solid #d400ff;
+    margin: 0 auto;
+    height: 60vh;
+}
+
+button.vjs-big-play-button {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0!important;
+    right: 0;
+    bottom: 0;
+    top: 0!important;
+    height: 100% !important;
+    border: none !important;
+    background: none !important;
+}
+
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+	bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-js .vjs-tech {
+    height: 100%;
+}
