@@ -1,0 +1,34 @@
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  .video-responsive video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border:0;
+  }
+  body{margin:0;padding:0}
+  .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_video_source{width:50px;height:16px}
+  .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_video_source:before{
+    content:"Server";
+    font-size:11px;
+    color:#333;
+    background:#fff!important;
+    width:50px;
+    height:16px;
+    line-height:16px;
+    border-radius:2px;
+    text-align:center;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    top:3px;
+  }
+  .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_controls_right .fluid_button_video_source .fluid_video_sources_list{
+    bottom:14px;
+    right:0;
+  }
