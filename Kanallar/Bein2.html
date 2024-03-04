@@ -13,38 +13,44 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.3.5/videojs.ads.js" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.3.5/videojs.ads.min.css"r el="stylesheet" />
     <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet" />
-	<link rel="stylesheet" href="bein1.css">
+	<link rel="stylesheet" href="deneme.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6356735003272876"
     crossorigin="anonymous"></script>
 </head>
 
-<body>
-    
-    <div class="maindiv">
-        <h1>Bein Sports 2</h1>
-        
-        <video id='myLinks'  class="video-js vjs-default-skin" width="" height="" controls>
-            <source type="application/x-mpegURL" src="https://corsproxy.org/?https://cakal.click/yayinb2.m3u8" />
-        </video>
-    </div>
-      </video>
-      <script src="node_modules/es5-shim/es5-shim.js"></script>
-      <script src="node_modules/video.js/dist/video.js"></script>
-      <script src="dist/videojs-contrib-ads.js"></script>
-      <script src="videojs.ads.js"></script>
-
-    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
-    <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
-    <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
-    
-    <script>
-        var player = videojs('myLinks');
-        player.play();
-    
-       // Set the AD tag URL
-           // adTagUrl: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=" 
-    </script>
+<script>
+     //<![CDATA[
+     function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) }
+     loadCSS("https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css");
+     //]]>
+     </script>
+     <script src='https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js'></script>
+     
+     <div class="video-responsive">
+     <video id="hls-video" poster="">
+         <source src="https://corsproxy.org/?https://cakal.click/yayinzirve.m3u8" title="Server 1" type="application/x-mpegURL"/>
+         <source src="https://corsproxy.org/?https://cakal.click/yayinb2.m3u8" title="Server 2" type="application/x-mpegURL"/>
+     </video>
+     </div>
+     
+     <script>
+     //<![CDATA[
+     fluidPlayer(
+         'hls-video',
+         {
+             layoutControls: {
+                 fillToContainer: false,
+                 autoPlay: true,
+                 controlBar: {
+                     autoHide:           true,
+                     autoHideTimeout:    3,
+                     animated:           true
+                 }
+             }
+         }
+     );
+     //]]>
+     </script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6356735003272876"
      crossorigin="anonymous"></script>
