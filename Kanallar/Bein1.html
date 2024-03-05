@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 <html>
-      <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://bradmax.com/client/files/player-js/73a9716fd26717763cd2d46fb9e41463645853de_14815/bradmax_player.js" ></script>
-<div style="width: 890px; height: 500px; background: black;" id="PLAYER_DOM_ID"></div>
-<script type="text/javascript">
-    var config = {
-        dataProvider: {
-            source: [
-                { url: "https://corsproxy.org/?https://cakal.click/yayinzirve.m3u8" }
-            ]
-        }
-    };
-
-    /** find player container in html DOM tree. */
-    var element = document.getElementById("PLAYER_DOM_ID");
-
-    /** create player */
-    var player = window.bradmax.player.create(element, config);
-      
-</script>
-      <iframe src="https://bradmax.com/client/embed-player/a75680a661c3aa3e5137f6923513738c12dae3e2_3496?mediaUrl=https%3A%2F%2Fbradmax.com%2Fstatic%2Fvideo%2Ftos%2F440272.m3u8&title=Tears%20of%20steel&duration=734.097415&splashImgUrl=https%3A%2F%2Fbradmax.com%2Fstatic%2Fimages%2Fstartsplash.jpg" width="600" height="400" frameBorder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <head>
+    <!-- Shaka Player compiled library: -->
+    <script src="dist/shaka-player.compiled.js"></script>
+    <!-- Your application source: -->
+    <script src="myapp.js"></script>
+  </head>
+  <body>
+    <video id="video"
+           width="640"
+           poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
+           controls autoplay></video>
+  </body>
 </html>
