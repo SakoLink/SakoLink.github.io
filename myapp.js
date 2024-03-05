@@ -1,6 +1,9 @@
 const manifestUri =
     'https://test.cors.workers.dev/?https://cakal.click/yayinzirve.m3u8';
 
+Access-Control-Allow-Origin: <origin header value>
+Access-Control-Allow-Credentials: true
+
 function initApp() {
   // Install built-in polyfills to patch browser incompatibilities.
   shaka.polyfill.installAll();
