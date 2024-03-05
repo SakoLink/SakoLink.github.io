@@ -13,17 +13,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.3.5/videojs.ads.js" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.3.5/videojs.ads.min.css"r el="stylesheet" />
     <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet" />
-	   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6356735003272876"
+	<link rel="stylesheet" href="bein1.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6356735003272876"
     crossorigin="anonymous"></script>
 </head>
 
 <body>
     
-    <div id="div_player" style="width: 720px; height: 406px; border: 2px solid grey;">
-
-<iframe id="iframe_player" src="http://videoplayer.vodobox.com/vodobox_player.php?vid=https%3A%2F%2Fcorsproxy.org%2F%3Fhttps%3A%2F%2Fcakal.click%2Fyayinzirve.m3u8&img=https://seeklogo.com/images/B/bein-sports-1-logo-4E5E4AE6B8-seeklogo.com.png&play=auto" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
-
-</div>
+    <div class="maindiv">
+        <h1>Bein Sports 1</h1>
+        
+        <video id='myLinks'  class="video-js vjs-default-skin" width="" height="" controls>
+            <source type="application/x-mpegURL" src="https://test.cors.workers.dev/?https://cakal.click/yayinzirve.m3u8" />
+        </video>
+    </div>
       </video>
       <script src="node_modules/es5-shim/es5-shim.js"></script>
       <script src="node_modules/video.js/dist/video.js"></script>
@@ -35,7 +38,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
     <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
     
-    <script>
+    <script>
+        var player = videojs('myLinks');
+        player.play();
     
        // Set the AD tag URL
            // adTagUrl: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=" 
