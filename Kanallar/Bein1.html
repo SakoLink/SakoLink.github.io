@@ -1,45 +1,32 @@
 <!DOCTYPE html>
-<!-- Our HTML5 document must start with a valid DOCTYPE -->
-<html>
+
 <head>
-  <meta charset="UTF-8">
-  <!-- We add a viewport meta tag for best rendering on mobile devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>TODO supply a title</title>
+
+    <title> Simple CORS Proxy Script</title>
+
+    <script>
+        function fetchProxy() {
+            const url = document.getElementById("url").value;
+            const proxyUrl = "cors_proxy.php?url=" + encodeURIComponent(url);
+
+            fetch(proxyUrl)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("result").innerText = data;
+                })
+                .catch(error => {
+                    console.error("Error fetching:", error);
+                });
+        }
+    </script>
 </head>
+
 <body>
-  <!-- Include Radiant Media Player JavaScript library -->
-  <script src="https://cdn.radiantmediatechs.com/rmp/9.13.2/js/rmp.min.js"></script>
-  <!-- Add a div container with a unique id - video and UI elements will be appended to this container -->
-  <div id="rmp"></div>
-  <!-- Set up player configuration options -->
-  <script>
-    // First we must provide a streaming source to the player - in this case an HLS feed
-    const src = {
-      hls: 'https://corsproxy.org/?'+'https://cakal.click/yayinzirve.m3u8'
-    };
-    // Then we set our player settings
-    const settings = {
-      licenseKey: 'Y2Vjc3FlY3NpYSEqXyUwPWFlY3NrYTJkczdiOCsyc2U/cm9tNWRhc2lzMzBkYjBBJV8q',
-      src: src,
-      // The player will automatically resize itself based on context and those reference width/height values
-      width: 640,
-      height: 360,
-      // Let us select a skin
-      skin: 's1',
-      // Let us add a poster frame to our player
-      contentMetadata: {
-        poster: [
-          'https://seeklogo.com/images/B/bein-sports-1-logo-4E5E4AE6B8-seeklogo.com.png'
-        ]
-      }
-    };
-    // Reference to our container div 
-    const elementID = 'rmp';
-    // Create an object based on RadiantMP constructor
-    const rmp = new RadiantMP(elementID);
-    // Initialization ... and done!
-    rmp.init(settings);
-  </script>
+    <h1> Simple CORS Proxy Script</h1>
+    <input type="text" id="url" placeholder="https://cakal.click/yayinzirve.m3u8">
+    <button onclick="fetchProxy()">Fetch</button>
+
+    <pre id="result"></pre>
 </body>
+
 </html>
