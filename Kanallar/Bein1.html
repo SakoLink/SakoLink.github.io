@@ -1,88 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Bein Sports 1</title>
-	<link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.3.5/videojs.ads.min.js" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.3.5/videojs-contrib-ads.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.3.5/videojs-contrib-ads.js" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.3.5/videojs-contrib-ads.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.3.5/videojs-contrib-ads.min.js" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.3.5/videojs.ads.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.3.5/videojs.ads.js" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/7.3.5/videojs.ads.min.css"r el="stylesheet" />
-    <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet" />
-	<link rel="stylesheet" href="bein1.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6356735003272876"
-    crossorigin="anonymous"></script>
-</head>
-
-<body>
-    
-    <div class="maindiv">
-        <h1>Bein Sports 1</h1>
-        
-        <video id='myLinks'  class="video-js vjs-default-skin" width="" height="" controls>
-            <source type="application/x-mpegURL" src="https://corsproxy.org/?https://cakal.click/yayinzirve.m3u8" />
-        </video>
-    </div>
-      </video>
-      <script src="node_modules/es5-shim/es5-shim.js"></script>
-      <script src="node_modules/video.js/dist/video.js"></script>
-      <script src="dist/videojs-contrib-ads.js"></script>
-      <script src="videojs.ads.js"></script>
-
-    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
-    <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
-    <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
-    
-    <script>
-        var player = videojs('myLinks');
-        player.play();
-    
-       // Set the AD tag URL
-           // adTagUrl: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=" 
-    </script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6356735003272876"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="autorelaxed"
-     data-ad-client="ca-pub-6356735003272876"
-     data-ad-slot="5607724285"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6356735003272876"
-     crossorigin="anonymous"></script>
-<!-- Bein1Sağ -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-6356735003272876"
-     data-ad-slot="9930112670"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6356735003272876"
-     crossorigin="anonymous"></script>
-<!-- Bein 1 Sol -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-6356735003272876"
-     data-ad-slot="7596621046"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</body>
-
+<html>
+  <head>
+    <!-- Shaka Player compiled library: -->
+    <script src="dist/shaka-player.compiled.js"></script>
+    <!-- Your application source: -->
+    <script src="myapp.js"></script>
+  </head>
+  <body>
+    <video id="video"
+           width="640"
+           poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
+           controls autoplay></video>
+  </body>
 </html>
+// myapp.js
+
+const manifestUri =
+    'https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd';
+
+function initApp() {
+  // Install built-in polyfills to patch browser incompatibilities.
+  shaka.polyfill.installAll();
+
+  // Check to see if the browser supports the basic APIs Shaka needs.
+  if (shaka.Player.isBrowserSupported()) {
+    // Everything looks good!
+    initPlayer();
+  } else {
+    // This browser does not have the minimum set of APIs we need.
+    console.error('Browser not supported!');
+  }
+}
+
+async function initPlayer() {
+  // Create a Player instance.
+  const video = document.getElementById('video');
+  const player = new shaka.Player();
+  await player.attach(video);
+
+  // Attach player to the window to make it easy to access in the JS console.
+  window.player = player;
+
+  // Listen for error events.
+  player.addEventListener('error', onErrorEvent);
+
+  // Try to load a manifest.
+  // This is an asynchronous process.
+  try {
+    await player.load(manifestUri);
+    // This runs if the asynchronous load is successful.
+    console.log('The video has now been loaded!');
+  } catch (e) {
+    // onError is executed if the asynchronous load fails.
+    onError(e);
+  }
+}
+
+function onErrorEvent(event) {
+  // Extract the shaka.util.Error object from the event.
+  onError(event.detail);
+}
+
+function onError(error) {
+  // Log the error.
+  console.error('Error code', error.code, 'object', error);
+}
+
+document.addEventListener('DOMContentLoaded', initApp);
