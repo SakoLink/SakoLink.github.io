@@ -4,15 +4,21 @@
   <meta charset='utf-8'>
 </head>
 <body>
-    <script src='https://player-static.qencode.com/release/qencode-bootstrapper.min.js'></script>
-    <div id='player'></div>
-    <script>
-        qPlayer('player', {
-            licenseKey: 'ca47c489-e0a8-4de9-6774-79dee1365298',
-            videoSources: { src: "https://test.cors.workers.dev/?https://cakal.click/yayinzirve.m3u8" }
-        }, function(){
-            console.log("player initiated")
-        });   
-    </script>    
+var params = {
+licenseKey: "ca47c489-e0a8-4de9-6774-79dee1365298",
+playback: {
+    muted: true,
+    autoplay: true,
+},
+env: "prod",
+videoSources: {
+    src: "https://test.cors.workers.dev/?https://cakal.click/yayinzirve.m3u8",
+},
+}
+
+qPlayer('my_player', params, function() { 
+// optional callback function after player is loaded
+console.log("Player is loaded");
+});    
 </body>
 </html>
